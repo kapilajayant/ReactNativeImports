@@ -5,3 +5,5 @@ npm install react-native-animatable --save
 npm install react-native-linear-gradient --save
 
 npm install --save react-native-vector-icons
+
+npm install react-native-simple-toast --save
