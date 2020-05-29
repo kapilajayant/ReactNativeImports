@@ -17,3 +17,43 @@ const SettingsRoute = () => {
         <SettingsScreen navigation = {navigation}/>
         );
 }
+
+
+class Home extends React.Component{
+
+    state = {
+        index: 2,
+        routes: [
+          { key: 'live', title: 'Live Stream', icon: 'video', },
+          { key: 'alerts', title: 'Alerts', icon: 'bell' },
+          { key: 'settings', title: 'Settings', icon: 'settings' },
+        ],
+      };
+
+      constructor(props){
+          super(props)
+          this.props = props
+      }
+
+    
+    _handleIndexChange = index => this.setState({ index });
+
+    _renderScene = BottomNavigation.SceneMap({
+        live: LiveRoute,
+        alerts: AlertsRoute,
+        settings: SettingsRoute,
+    });
+
+    render(){
+    return(
+        <BottomNavigation
+        navigationState={this.state}
+        onIndexChange={this._handleIndexChange}
+        renderScene={this._renderScene}
+        barStyle={{backgroundColor:'black'}}
+        />
+    );
+}
+}
+
+export default Home;
