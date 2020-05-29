@@ -35,3 +35,22 @@ class AlertCard extends React.Component{
     );
     }
 }
+
+class AlertScreen extends React.Component{
+    render(){
+    return(
+        <View style={styles.container}>
+            <ScrollView>
+                <AlertCard cardTitle="Person Detected!" cardIcon="account"/>
+                <AlertCard cardTitle="Animal Detected!" cardIcon="dog"/>
+                <AlertCard cardTitle="Face Detected!" cardIcon="face"/>
+                <AlertCard cardTitle="Person Detected!" cardIcon="account"/>
+                <AlertCard cardTitle="Animal Detected!" cardIcon="dog"/>
+                <AlertCard cardTitle="Face Detected!" cardIcon="face"/>
+            </ScrollView>
+        </View>
+    );
+}
+}
+
+export default AlertScreen;
