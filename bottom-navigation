@@ -1,0 +1,19 @@
+import { BottomNavigation, Text } from 'react-native-paper';
+
+const LiveRoute = () => {
+    return(
+        <LiveScreen/>
+    )
+}
+
+const AlertsRoute = () => {
+    return(
+        <AlertScreen />
+    );
+}
+
+const SettingsRoute = () => {
+        return (
+        <SettingsScreen navigation = {navigation}/>
+        );
+}
