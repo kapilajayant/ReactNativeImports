@@ -1,0 +1,37 @@
+
+class AlertCard extends React.Component{
+    
+    constructor(props){
+        super(props)
+        this.props = props
+    }
+
+    render(){
+    return(
+    <TouchableRipple
+        onPress={() => 
+            {
+                console.log('Pressed')
+            }
+    }
+        rippleColor="rgba(0, 0, 0, .32)"
+    >
+    <Card style={styles.cardStyle}>
+    <Card.Title
+    title = {this.props.cardTitle}
+    subtitle="Some Activity has been detected "
+    left={(props) => <Avatar.Icon {...props} style={{backgroundColor:'#000'}} icon = {this.props.cardIcon} />}
+    />
+        <Card.Actions>
+            <Button style={styles.cardButtonStyle}>
+                <Text style={{color:'white'}}>View</Text>
+            </Button>
+            <Button style={styles.cardButtonStyle}>
+                <Text style={{color:'white'}}>Ignore</Text>
+            </Button>
+        </Card.Actions>
+    </Card>
+    </TouchableRipple>
+    );
+    }
+}
