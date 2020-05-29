@@ -1,3 +1,6 @@
+//creating card component
+import {Card, Button, Text, Avatar, TouchableRipple} from 'react-native-paper';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class AlertCard extends React.Component{
     
@@ -35,6 +38,8 @@ class AlertCard extends React.Component{
     );
     }
 }
+
+//calling card component into some other component
 
 class AlertScreen extends React.Component{
     render(){
